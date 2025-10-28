@@ -1,0 +1,44 @@
+# Windows Zone.Identifier files
+*:Zone.Identifier
+
+# Server logs
+error_log
+*.log
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.tmp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
