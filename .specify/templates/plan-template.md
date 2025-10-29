@@ -31,7 +31,21 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Verify compliance with principles in `.specify/memory/constitution.md`:
+
+- [ ] **User-First Experience**: Does this feature prioritize search speed and intuitive navigation?
+- [ ] **Data Integrity**: Are data accuracy and validation mechanisms defined?
+- [ ] **Performance & Availability**: Are performance targets and optimization strategies identified?
+- [ ] **Clean Separation of Concerns**: Is there clear separation between backend (PHP), frontend (JS), and data layers?
+- [ ] **Progressive Enhancement**: Does core functionality work without JavaScript?
+
+**Quality Standards Check**:
+
+- [ ] Security requirements identified (input validation, CSRF protection, credential management)
+- [ ] Testing strategy defined (if tests requested for this feature)
+- [ ] Code quality standards applicable (prepared statements, error handling, semantic HTML)
+
+**Violations Requiring Justification**: List any principle violations in Complexity Tracking section below
 
 ## Project Structure
 
