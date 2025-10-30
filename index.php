@@ -7,11 +7,14 @@
     <title>HVAC Contractors | Find Your AC Repair Contractor</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="components/signup-modal.css">
     
     <style>
         .ban__buck{gap:10px;}
-        .ban__wrapper{padding:15px;border:1pt solid #ccc;gap:4px;border-radius:8px;background: linear-gradient(0deg, rgba(255,255,255,1) 34%, rgba(238,238,238,1) 100%);}
+        .ban__wrapper{padding:15px;border:1pt solid #ccc;gap:4px;border-radius:8px;background: linear-gradient(0deg, rgba(255,255,255,1) 34%, rgba(238,238,238,1) 100%);} 
         .ban__img{max-width:800px;max-height:148px;border:1pt solid #888;}
+        /* Accessible helper to visually hide labels while keeping them for screen readers */
+        .visually-hidden{position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;margin:-1px !important;overflow:hidden !important;clip:rect(0 0 0 0) !important;white-space:nowrap !important;border:0 !important;}
     </style>
 </head>
 <body>
@@ -23,8 +26,8 @@
         <div>
             <nav class="items-center">
                 <a href="mailto:contact@airconditioner.com"><i class="fa-regular fa-envelope"></i> Contact Us</a>
-                <a href="disclaimer.htm">Disclaimer</a>
-                <a href="#secSignup" class="b">Sign Up</a>
+                <a href="disclaimer.php">Disclaimer</a>
+                <a href="#signupModal" class="b" data-open-signup-modal aria-controls="signupModal">Sign Up</a>
             </nav>
             <span>
                 <img width="200" src="smiling-repairman2.png" alt="Smiling Contractor">
@@ -49,7 +52,8 @@
                 </span>
                 <span class="search__inp__wrapper items-center">
                     <span class="trg search__loc justify-end"><i class="fa-solid fa-location-dot"></i></span>
-                    <input id="search__inp" class="trg search__inp self-stretch text-lg" type="text" value="Select a State">
+                    <label for="search__inp" class="visually-hidden">Select a State</label>
+                    <input id="search__inp" class="trg search__inp self-stretch text-lg" type="text" value="Select a State" placeholder="Select a State" title="Select a State">
                     <span class="trg search__crt"><i class="fa-solid fa-caret-down"></i></span>
                 </span>
                 <ul id="lb" hidden></ul>
@@ -59,6 +63,13 @@
             <div class="signup__wrapper gradient_grey">
                 <span class="signup__hd text-5xl">SIGNUP TODAY!</span>
                 <span class="signup__copy b text-xl">If you are in the Business of Air Conditioners then you must Advertise with us on AirConditioner.com and let people on the internet find you fast and easy since our <i>Positioning</i> is great that will increase the number of hits for your business.</span>
+                <div class="items-center" style="gap:12px;margin-top:12px;">
+                    <span class="text-sm" style="color:#666;">For sign-up information, please contact us via phone or email:</span>
+                    <div class="items-center" style="gap:10px;">
+                        <a class="contact-link" href="tel:+18187854151" aria-label="Call 818-785-4151"><i class="fa-solid fa-phone"></i> 818-785-4151</a>
+                        <a class="contact-link" href="mailto:contact@airconditioner.com" aria-label="Email contact@airconditioner.com"><i class="fa-regular fa-envelope"></i> contact@airconditioner.com</a>
+                    </div>
+                </div>
             </div>
         </section>
     </search>
@@ -116,13 +127,36 @@
             <span>AirConditionerContractors.com</span>
             <span class="footer__nav">
                 <a href="mailto:contact@airconditioner.com"><i class="fa-regular fa-envelope"></i> Contact Us</a>
-                <a href="disclaimer.htm">Disclaimer</a>
-                <a href="#secSignup" class="b">Sign Up</a>
+                <a href="disclaimer.php">Disclaimer</a>
+                <a href="#signupModal" class="b" data-open-signup-modal aria-controls="signupModal">Sign Up</a>
             </span>
         </div>
     </footer>
-    <span class="copyright justify-center text-sm">&copy; COPYRIGHT 2024 AirConditionerContractors.com &emsp;POWERED BY&nbsp;<a href="https://airconditioner.com">AIRCONDITIONER.COM</a></span>
+    <span class="copyright justify-center text-sm">&copy; COPYRIGHT <?php echo date('Y'); ?> AirConditionerContractors.com &emsp;POWERED BY&nbsp;<a href="https://airconditioner.com">AIRCONDITIONER.COM</a></span>
+    <!-- Sign Up Modal Markup -->
+    <div id="signupModal" class="signup-modal" role="dialog" aria-modal="true" aria-labelledby="signupModalTitle" aria-describedby="signupModalDesc" hidden>
+        <div class="signup-modal__backdrop" data-dismiss="signup-modal" aria-hidden="true"></div>
+        <div class="signup-modal__dialog" tabindex="-1">
+            <button class="signup-modal__close" type="button" aria-label="Close sign-up modal" data-dismiss="signup-modal">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <h2 id="signupModalTitle" class="text-2xl b">Sign Up Information</h2>
+            <p id="signupModalDesc" class="text-sm" style="color:#666;margin-bottom:1rem;">For sign-up information, please contact us via phone or email.</p>
+
+            <div class="signup-modal__content items-center">
+                <a class="contact-link" href="tel:+18187854151" aria-label="Call 818-785-4151">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>818-785-4151</span>
+                </a>
+                <a class="contact-link" href="mailto:contact@airconditioner.com" aria-label="Email contact@airconditioner.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>contact@airconditioner.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <script src="cities2.js"></script>
     <script src="main8.js"></script>
+    <script src="components/signup-modal.js"></script>
 </body>
 </html>

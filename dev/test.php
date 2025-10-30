@@ -16,7 +16,7 @@
         <div>
             <nav class="items-center">
                 <a href="mailto:contact@airconditioner.com"><i class="fa-regular fa-envelope"></i> Contact Us</a>
-                <a href="disclaimer.htm">Disclaimer</a>
+                <a href="disclaimer.php">Disclaimer</a>
                 <a href="#secSignup" class="b">Sign Up</a>
             </nav>
             <span>
@@ -91,7 +91,7 @@
             <span>AirConditionerContractors.com</span>
             <span class="footer__nav">
                 <a href="mailto:contact@airconditioner.com"><i class="fa-regular fa-envelope"></i> Contact Us</a>
-                <a href="disclaimer.htm">Disclaimer</a>
+                <a href="disclaimer.php">Disclaimer</a>
                 <a href="#secSignup" class="b">Sign Up</a>
             </span>
         </div>

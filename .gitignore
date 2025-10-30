@@ -42,3 +42,7 @@ vendor/
 # Build outputs
 dist/
 build/
+
+# Server Config
+.htaccess
+.htpasswd

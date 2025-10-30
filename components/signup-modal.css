@@ -1,0 +1,71 @@
+/* Signup Modal Styles - responsive and accessible */
+.signup-modal[hidden] { display: none; }
+
+.signup-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.signup-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.signup-modal.open .signup-modal__backdrop { opacity: 1; }
+
+.signup-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 10vh auto;
+  padding: clamp(16px, 3vw, 24px);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.signup-modal.open .signup-modal__dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.signup-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.signup-modal__content {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-link:hover { background: #f7f7f7; }
+
+@media (max-width: 480px) {
+  .signup-modal__dialog { margin: 5vh auto; }
+  .signup-modal__content { flex-direction: column; }
+}
