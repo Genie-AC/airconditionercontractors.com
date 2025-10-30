@@ -187,7 +187,7 @@
     <!--</div>-->
     
     <span class="copyright justify-center text-sm">&copy; COPYRIGHT 2024 AirConditionerContractors.com &emsp;POWERED BY&nbsp;<a href="https://airconditioner.com">AIRCONDITIONER.COM</a></span>
-    <!--<script src="cities2.js"></script>-->
-    <!--<script src="main8.js"></script>-->
+    <!--<script src="cities.js"></script>-->
+    <!--<script src="main.js"></script>-->
 </body>
 </html>

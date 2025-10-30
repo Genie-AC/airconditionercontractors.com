@@ -25,9 +25,8 @@
         </span>
         <div>
             <nav class="items-center">
-                <a href="mailto:contact@airconditioner.com"><i class="fa-regular fa-envelope"></i> Contact Us</a>
                 <a href="disclaimer.php">Disclaimer</a>
-                <a href="#signupModal" class="b" data-open-signup-modal aria-controls="signupModal">Sign Up</a>
+                <a href="#signupModal" class="b" data-open-signup-modal aria-controls="signupModal" aria-label="Open Sign Up and Contact options">Sign Up / Contact Us</a>
             </nav>
             <span>
                 <img width="200" src="smiling-repairman2.png" alt="Smiling Contractor">
@@ -126,9 +125,8 @@
             <span class="text-lg b">HVAC Contractors</span>
             <span>AirConditionerContractors.com</span>
             <span class="footer__nav">
-                <a href="mailto:contact@airconditioner.com"><i class="fa-regular fa-envelope"></i> Contact Us</a>
                 <a href="disclaimer.php">Disclaimer</a>
-                <a href="#signupModal" class="b" data-open-signup-modal aria-controls="signupModal">Sign Up</a>
+                <a href="#signupModal" class="b" data-open-signup-modal aria-controls="signupModal" aria-label="Open Sign Up and Contact options">Sign Up / Contact Us</a>
             </span>
         </div>
     </footer>
@@ -155,8 +153,8 @@
             </div>
         </div>
     </div>
-    <script src="cities2.js"></script>
-    <script src="main8.js"></script>
+    <script src="cities.js"></script>
+    <script src="main.js"></script>
     <script src="components/signup-modal.js"></script>
 </body>
 </html>

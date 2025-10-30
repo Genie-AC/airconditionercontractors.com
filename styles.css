@@ -1,4 +1,4 @@
-body{margin:0;font:16px sans-serif;background: #214976;}
+body{margin:0;font:16px sans-serif;background:#fff;}
 a{text-decoration: none;}
 div,footer,header,nav,search,section,span{display:flex;}
 div{flex-direction: column;}
@@ -34,7 +34,7 @@ nav a:hover{border-color:deepskyblue}
 
 search{flex-direction:column}
 .search__wrapper{width:100vw;background:url('minisplit2.jpg') no-repeat center;background-size:cover;margin:0;height:350px;}
-.search__bubble{padding:25px 100px 50px;background:#214976aa;border-radius:15px; border:1pt solid;}
+.search__bubble{padding:25px 100px 50px;background:#214976aa;border-radius:15px;border:1pt solid;}
 .search__hd{color:#fff;}
 .search__hd__copy{padding:2px 4px 8px;}
 .search__inp__wrapper{height:60px;background:#ffffffee;}
